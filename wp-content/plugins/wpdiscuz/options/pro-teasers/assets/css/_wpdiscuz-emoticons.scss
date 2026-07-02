@@ -1,0 +1,48 @@
+// =====================================================
+//  WSM — Emoticons: sticker images and custom sticker table
+// =====================================================
+
+.wpd-pro-teaser-body {
+
+    // Sticker images
+    .wpdiscuz-option-smile {
+        margin: 2px;
+        width: 40px;
+        max-width: 40px;
+        cursor: not-allowed;
+    }
+
+    // Custom stickers table prefix column
+    .sprefix {
+        font-size: 18px;
+        font-weight: 700;
+        padding: 0 2px;
+        color: #555;
+    }
+
+    // Custom stickers section header
+    .wsm-pro-custom-wrap { width: calc(100% - 40px); }
+
+    .wsm-pro-custom-h2 {
+        margin-bottom: 0;
+        font-size: 15px;
+        color: #555;
+    }
+
+    // Custom stickers table cells
+    .wsm-pro-td-code  { padding-top: 5px; width:  7%; }
+    .wsm-pro-td-pfx   { width: 10%; padding: 0 1px; }
+    .wsm-pro-td-label { padding: 5px 10px 0 20px; width: 12%; white-space: nowrap; }
+    .wsm-pro-td-url   { width: 30%; }
+
+    // Disabled "Add" button
+    .wsm-pro-add-btn {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+// RTL
+body.rtl .wpd-pro-teaser-body {
+    .wsm-pro-td-label { padding: 5px 20px 0 10px; }
+}

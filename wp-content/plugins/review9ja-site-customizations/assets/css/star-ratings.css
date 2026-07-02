@@ -1,0 +1,287 @@
+/* Review9ja star rating style */
+:root {
+  --review9ja-star-size: 18px;
+  --review9ja-star-icon-size: 11px;
+  --review9ja-star-radius: 5px;
+  --review9ja-star-gap: 4px;
+  --review9ja-star-green: #16a34a;
+  --review9ja-star-empty: #e5e7eb;
+}
+
+/* Smaller stars only on Explore page */
+#c27-explore-listings {
+  --review9ja-star-size: 12px;
+  --review9ja-star-icon-size: 9px;
+  --review9ja-star-radius: 4px;
+  --review9ja-star-gap: 1px;
+}
+
+.listing-rating,
+.rating-preview-card,
+.rating-filter .rating-stars,
+.clasificacion,
+.elementor-star-rating {
+  display: inline-flex;
+  gap: var(--review9ja-star-gap);
+  align-items: center;
+}
+
+.listing-rating i.mi,
+.rating-preview-card i.mi,
+.rating-filter .rating-stars i.mi,
+.clasificacion i.mi,
+.listing-review-rating i.mi,
+.listing-preview i.mi,
+.elementor-star-rating i {
+  width: var(--review9ja-star-size) !important;
+  height: var(--review9ja-star-size) !important;
+  min-width: var(--review9ja-star-size) !important;
+  min-height: var(--review9ja-star-size) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: var(--review9ja-star-radius) !important;
+  background: var(--review9ja-star-empty) !important;
+  color: #ffffff !important;
+  font-size: var(--review9ja-star-icon-size) !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.lf-item i.mi.star,
+.lf-item i.mi.star_half,
+.lf-item i.mi.star_border,
+.lf-contact i.mi.star,
+.lf-contact i.mi.star_half,
+.lf-contact i.mi.star_border {
+  width: var(--review9ja-star-size) !important;
+  height: var(--review9ja-star-size) !important;
+  min-width: var(--review9ja-star-size) !important;
+  min-height: var(--review9ja-star-size) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: var(--review9ja-star-radius) !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  margin-inline-end: var(--review9ja-star-gap) !important;
+}
+
+.lf-item i.mi.star:last-child,
+.lf-item i.mi.star_half:last-child,
+.lf-item i.mi.star_border:last-child,
+.lf-contact i.mi.star:last-child,
+.lf-contact i.mi.star_half:last-child,
+.lf-contact i.mi.star_border:last-child {
+  margin-inline-end: 0 !important;
+}
+
+.listing-rating i.mi.star,
+.rating-preview-card i.mi.star,
+.rating-filter .rating-stars i.mi.star,
+.clasificacion i.mi.star,
+.listing-review-rating i.mi.star,
+.listing-preview i.mi.star {
+  background: var(--review9ja-star-green) !important;
+}
+
+.listing-rating i.mi.star_half,
+.rating-preview-card i.mi.star_half,
+.rating-filter .rating-stars i.mi.star_half,
+.clasificacion i.mi.star_half,
+.listing-review-rating i.mi.star_half,
+.listing-preview i.mi.star_half {
+  background: linear-gradient(90deg, var(--review9ja-star-green) 50%, var(--review9ja-star-empty) 50%) !important;
+}
+
+.listing-rating i.mi.star_border,
+.rating-preview-card i.mi.star_border,
+.rating-filter .rating-stars i.mi.star_border,
+.clasificacion i.mi.star_border,
+.listing-review-rating i.mi.star_border,
+.listing-preview i.mi.star_border {
+  background: var(--review9ja-star-empty) !important;
+  color: #ffffff !important;
+}
+
+.lf-item i.mi.star,
+.lf-contact i.mi.star {
+  background: var(--review9ja-star-green) !important;
+}
+
+.lf-item i.mi.star_half,
+.lf-contact i.mi.star_half {
+  background: linear-gradient(90deg, var(--review9ja-star-green) 50%, var(--review9ja-star-empty) 50%) !important;
+}
+
+.lf-item i.mi.star_border,
+.lf-contact i.mi.star_border {
+  background: var(--review9ja-star-empty) !important;
+  color: #ffffff !important;
+}
+
+.elementor-star-rating i {
+  font-style: normal !important;
+  font-size: var(--review9ja-star-icon-size) !important;
+}
+
+.elementor-star-rating i:before {
+  content: none !important;
+}
+
+.elementor-star-rating .elementor-star-full {
+  background: var(--review9ja-star-green) !important;
+}
+
+.elementor-star-rating .elementor-star-empty {
+  background: var(--review9ja-star-empty) !important;
+}
+
+.elementor-star-rating .elementor-star-1 { background: linear-gradient(90deg, var(--review9ja-star-green) 10%, var(--review9ja-star-empty) 10%) !important; }
+.elementor-star-rating .elementor-star-2 { background: linear-gradient(90deg, var(--review9ja-star-green) 20%, var(--review9ja-star-empty) 20%) !important; }
+.elementor-star-rating .elementor-star-3 { background: linear-gradient(90deg, var(--review9ja-star-green) 30%, var(--review9ja-star-empty) 30%) !important; }
+.elementor-star-rating .elementor-star-4 { background: linear-gradient(90deg, var(--review9ja-star-green) 40%, var(--review9ja-star-empty) 40%) !important; }
+.elementor-star-rating .elementor-star-5 { background: linear-gradient(90deg, var(--review9ja-star-green) 50%, var(--review9ja-star-empty) 50%) !important; }
+.elementor-star-rating .elementor-star-6 { background: linear-gradient(90deg, var(--review9ja-star-green) 60%, var(--review9ja-star-empty) 60%) !important; }
+.elementor-star-rating .elementor-star-7 { background: linear-gradient(90deg, var(--review9ja-star-green) 70%, var(--review9ja-star-empty) 70%) !important; }
+.elementor-star-rating .elementor-star-8 { background: linear-gradient(90deg, var(--review9ja-star-green) 80%, var(--review9ja-star-empty) 80%) !important; }
+.elementor-star-rating .elementor-star-9 { background: linear-gradient(90deg, var(--review9ja-star-green) 90%, var(--review9ja-star-empty) 90%) !important; }
+
+/* Review form (add review) - use theme default stars as fallback */
+.form-group-review-ratings .clasificacion {
+  display: inline-flex !important;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0 !important;
+  margin-bottom: 0;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.form-group-review-ratings input[type="radio"] {
+  display: none;
+}
+
+.form-group-review-ratings .clasificacion label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: auto !important;
+  height: auto !important;
+  cursor: pointer;
+  margin: 0;
+  background: none !important;
+  line-height: 1;
+}
+
+.form-group-review-ratings .clasificacion label i.mi {
+  width: 25px !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  background: none !important;
+  border-radius: 0 !important;
+  color: rgba(45, 45, 45, 0.21) !important;
+  font-size: 26px !important;
+  line-height: 1 !important;
+  box-shadow: none !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
+}
+
+.form-group-review-ratings .clasificacion label:hover i.mi,
+.form-group-review-ratings .clasificacion label:hover ~ label i.mi,
+.form-group-review-ratings .clasificacion input:checked ~ label i.mi {
+  background: none !important;
+  color: var(--accent) !important;
+}
+
+.form-group-review-ratings.rating-mode-10 label {
+  overflow: hidden;
+  vertical-align: top;
+  width: 12px;
+}
+
+.form-group-review-ratings.rating-mode-10 label.left-half i.mi {
+  transform: translate(50%) !important;
+  direction: rtl;
+}
+
+.form-group-review-ratings.rating-mode-10 label.right-half i.mi {
+  transform: none !important;
+  direction: rtl;
+}
+
+/* Custom review form UI (enhanced via JS) */
+.form-group-review-ratings .r9-review-rating {
+  display: none;
+  gap: var(--review9ja-star-gap);
+  align-items: center;
+  margin-top: 4px;
+}
+
+html.r9-review-stars-js .form-group-review-ratings .rating-number {
+  display: none !important;
+}
+
+/* Bigger stars for Add a review rating */
+.sidebar-comment-form .form-group-review-ratings {
+  --review9ja-star-size: 24px;
+  --review9ja-star-icon-size: 14px;
+  --review9ja-star-radius: 6px;
+  --review9ja-star-gap: 4px;
+}
+
+.form-group-review-ratings .rating-category-field.r9-rating-enhanced .rating-number {
+  display: none;
+}
+
+.form-group-review-ratings .rating-category-field.r9-rating-enhanced .r9-review-rating {
+  display: inline-flex;
+}
+
+.form-group-review-ratings .r9-review-star {
+  width: var(--review9ja-star-size);
+  height: var(--review9ja-star-size);
+  border-radius: var(--review9ja-star-radius);
+  background: var(--review9ja-star-empty);
+  color: #ffffff;
+  font-size: var(--review9ja-star-icon-size);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-group-review-ratings .r9-review-star::before {
+  content: "\e838";
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: inherit;
+  line-height: 1;
+}
+
+.form-group-review-ratings .r9-review-star.is-full {
+  background: var(--review9ja-star-green);
+}
+
+.form-group-review-ratings .r9-review-star.is-half {
+  background: linear-gradient(90deg, var(--review9ja-star-green) 50%, var(--review9ja-star-empty) 50%);
+}

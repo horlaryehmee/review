@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --cs-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --cs-bg: #f8f9fa;
+  --cs-text-main: #111827;
+  --cs-text-muted: #6b7280;
+  --cs-primary: #1d77f2;
+  --cs-primary-hover: #1668d8;
+  --cs-primary-soft: #eff6ff;
+  --cs-white: #ffffff;
+  --cs-border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.bakhtech-cs-body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--cs-font);
+  color: var(--cs-text-main);
+  background-color: var(--cs-bg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bakhtech-cs-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.bakhtech-cs-header {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bakhtech-cs-header-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cs-text-muted);
+}
+
+/* Main Content */
+.bakhtech-cs-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Badge */
+.bakhtech-cs-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--cs-primary-soft);
+  color: var(--cs-primary);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  border: 1px solid rgba(29, 119, 242, 0.1);
+}
+
+.bakhtech-cs-badge-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Logo Area */
+.bakhtech-cs-logo-area {
+  margin-bottom: 24px;
+}
+
+.bakhtech-cs-logo-img {
+  max-width: 200px;
+  /* Reasonable limit for custom logos */
+  height: auto;
+  display: block;
+}
+
+.bakhtech-cs-icon-default {
+  width: 96px;
+  height: 96px;
+  background: var(--cs-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.bakhtech-cs-icon-default svg {
+  width: 48px;
+  height: 48px;
+  color: var(--cs-primary);
+}
+
+/* Typography */
+.bakhtech-cs-title {
+  font-size: 56px;
+  font-weight: 900;
+  color: var(--cs-text-main);
+  margin: 0 0 16px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.bakhtech-cs-tagline {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--cs-text-main);
+  margin: 0 0 24px;
+}
+
+.bakhtech-cs-highlight {
+  color: var(--cs-primary);
+}
+
+.bakhtech-cs-description {
+  font-size: 16px;
+  color: var(--cs-text-muted);
+  max-width: 540px;
+  margin: 0 0 48px;
+  line-height: 1.6;
+}
+
+/* Countdown */
+.bakhtech-cs-countdown {
+  display: flex;
+  align-items: center;
+  background: var(--cs-white);
+  padding: 24px 48px;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--cs-border);
+  gap: 32px;
+  /* Gap between items */
+  margin-bottom: 48px;
+}
+
+.bakhtech-cs-countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-width: 60px;
+}
+
+.bakhtech-cs-count {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--cs-text-main);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.bakhtech-cs-count-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #9ca3af;
+  /* Light gray for labels */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Colons between items */
+.bakhtech-cs-countdown-item:not(:last-child)::after {
+  content: ":";
+  position: absolute;
+  right: -20px;
+  /* Adjust based on gap */
+  top: 8px;
+  /* Visual alignment with numbers */
+  font-size: 28px;
+  font-weight: 600;
+  color: #d1d5db;
+}
+
+/* Form */
+.bakhtech-cs-form {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bakhtech-cs-input-group {
+  display: flex;
+  align-items: center;
+  background: var(--cs-white);
+  border: 1px solid var(--cs-border);
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s;
+}
+
+.bakhtech-cs-input-group:focus-within {
+  border-color: var(--cs-primary);
+  box-shadow: 0 0 0 3px var(--cs-primary-soft);
+}
+
+.bakhtech-cs-input-icon {
+  padding-left: 12px;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+}
+
+.bakhtech-cs-input-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.bakhtech-cs-input-group input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px;
+  font-size: 14px;
+  color: var(--cs-text-main);
+  font-family: var(--cs-font);
+  background: transparent;
+}
+
+.bakhtech-cs-input-group input::placeholder {
+  color: #9ca3af;
+}
+
+.bakhtech-cs-input-group button {
+  background-color: var(--cs-primary);
+  color: var(--cs-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.bakhtech-cs-input-group button:hover {
+  background-color: var(--cs-primary-hover);
+}
+
+.bakhtech-cs-form-note {
+  font-size: 12px;
+  color: var(--cs-text-muted);
+  margin: 0;
+}
+
+/* Footer */
+.bakhtech-cs-footer {
+  padding: 24px 40px;
+  font-size: 12px;
+  color: var(--cs-text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cs-white);
+  border-top: 1px solid var(--cs-border);
+}
+
+.bakhtech-cs-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.bakhtech-cs-socials a {
+  color: #9ca3af;
+  transition: color 0.2s;
+}
+
+.bakhtech-cs-socials a:hover {
+  color: var(--cs-text-muted);
+}
+
+.bakhtech-cs-socials svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .bakhtech-cs-header {
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .bakhtech-cs-main {
+    padding: 32px 16px;
+  }
+
+  .bakhtech-cs-title {
+    font-size: 36px;
+  }
+
+  .bakhtech-cs-tagline {
+    font-size: 20px;
+  }
+
+  .bakhtech-cs-countdown {
+    padding: 20px;
+    gap: 16px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bakhtech-cs-count {
+    font-size: 28px;
+  }
+
+  .bakhtech-cs-countdown-item:not(:last-child)::after {
+    right: -10px;
+    top: 4px;
+    font-size: 20px;
+  }
+
+  .bakhtech-cs-footer {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+/* Fluent Form Integration Overrides */
+.bakhtech-cs-fluent-form {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.bakhtech-cs-fluent-form form {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  background: var(--cs-white);
+  border: 1px solid var(--cs-border);
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s;
+}
+
+.bakhtech-cs-fluent-form form:focus-within {
+  border-color: var(--cs-primary);
+  box-shadow: 0 0 0 3px var(--cs-primary-soft);
+}
+
+/* Hide labels and other noise */
+.bakhtech-cs-fluent-form .ff-el-label,
+.bakhtech-cs-fluent-form .ff-message-success,
+.bakhtech-cs-fluent-form .ff-el-help-message {
+  display: none !important;
+}
+
+/* Input Fields */
+.bakhtech-cs-fluent-form .ff-el-group {
+  margin-bottom: 0 !important;
+  flex: 1;
+  min-width: 0;
+  /* Prevent flex overflow */
+}
+
+.bakhtech-cs-fluent-form .ff-el-form-control {
+  width: 100% !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 10px 10px 10px 36px !important;
+  /* Left padding for icon */
+  height: auto !important;
+  font-family: var(--cs-font);
+  font-size: 14px;
+  color: var(--cs-text-main);
+  /* Embedded Envelope Icon */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z' fill='%239ca3af'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 18px 18px;
+}
+
+.bakhtech-cs-fluent-form .ff-el-form-control::placeholder {
+  color: #9ca3af;
+}
+
+/* Submit Button */
+.bakhtech-cs-fluent-form .ff_submit_btn_wrapper {
+  margin: 0 !important;
+}
+
+.bakhtech-cs-fluent-form .ff-btn-submit {
+  background-color: var(--cs-primary) !important;
+  color: var(--cs-white) !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  border-radius: 6px !important;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  height: auto !important;
+  line-height: 1.5;
+}
+
+.bakhtech-cs-fluent-form .ff-btn-submit:hover {
+  background-color: var(--cs-primary-hover) !important;
+}
+
+/* Error Messages - try to keep them visible but discreet */
+.bakhtech-cs-fluent-form .error-text {
+  font-size: 11px;
+  color: #ef4444;
+  margin-top: 4px;
+  padding-left: 10px;
+  position: absolute;
+  /* Take out of flow to not break flex */
+  bottom: -20px;
+}
+
+@media (max-width: 640px) {
+  .bakhtech-cs-fluent-form form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bakhtech-cs-fluent-form .ff-el-form-control {
+    width: 100% !important;
+  }
+
+  .bakhtech-cs-fluent-form .ff-btn-submit {
+    width: 100% !important;
+  }
+}

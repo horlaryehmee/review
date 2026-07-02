@@ -1,0 +1,75 @@
+// =====================================================
+//  WE — Embeds: oEmbed provider grid
+//  Uses same selector specificity as the real plugin to
+//  override the main settings .wpd-opt-input { width:35% }
+// =====================================================
+
+.wpd-pro-teaser-body {
+
+    // Dimension unit select (px/%)
+    // !important needed: #wpd-setbox .wpd-setbox-body select { min-width/width } has higher specificity
+    .we-pro-dim-select {
+        min-width: auto !important;
+        width: auto !important;
+        vertical-align: top;
+    }
+
+    // oEmbed providers section — overrides default row layout
+    // !important needed: #wpd-setbox .wpd-setcon .wpd-opt-row { display: flex } has higher specificity
+    .we-embed-row { display: block !important; }
+
+    // oEmbed providers grid wrapper
+    // !important needed: #wpd-setbox .wpd-setcon .wpd-opt-row .wpd-opt-input { width: 35% } has higher specificity
+    .we-embed-items {
+        width: 100% !important;
+        display: inline-block;
+        padding-top: 10px;
+    }
+
+    // Float children inside .we-block
+    .embed-label-wrap          { float: left; }
+    .we-provider-checkbox-values { float: right; }
+
+    // Embed provider logo inside label
+    .we-embed-icon {
+        vertical-align: middle;
+        margin-right: 5px;
+        max-height: 20px;
+    }
+
+    // Select-all / Unselect-all buttons row
+    .we-buttons-row {
+        margin-top: 15px;
+        float: right;
+    }
+}
+
+// RTL
+body.rtl .wpd-pro-teaser-body {
+    .embed-label-wrap            { float: right; }
+    .we-provider-checkbox-values { float: left; }
+    .we-embed-icon               { margin-right: 0; margin-left: 5px; }
+    .we-buttons-row              { float: left; }
+}
+
+#wpd-setbox .wpd-setcon .wpd-opt-row .wpd-opt-input.we-block {
+    min-width: 31%;
+    width: 31%;
+    min-height: 30px;
+    float: left;
+    display: inline-block;
+    margin-right: 2%;
+    margin-bottom: 3px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 30px;
+
+    .embed-label {
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    .we-provider-checkbox {
+        cursor: not-allowed;
+    }
+}

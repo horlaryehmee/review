@@ -1,0 +1,8 @@
+// =====================================================
+//  BPI — BuddyPress Integration: settings button image
+// =====================================================
+
+.wpd-pro-teaser-body {
+    // The "My Content & Settings" button screenshot is narrower than full-width
+    .bpi-settings-img { max-width: 615px; }
+}

@@ -1,0 +1,563 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Social Ninja Pro\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-06 12:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.4; wp-5.8.1\n"
+"X-Domain: wp-social-ninja-pro"
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:273
+msgid " Comments"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:96
+msgid " is required"
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:266
+msgid " Likes"
+msgstr ""
+
+#: app/Views/public/reviews-templates/business_info.php:23
+msgid " Rating"
+msgstr ""
+
+#: app/Services/Platforms/Feeds/Instagram/HashtagFeed.php:101
+msgid ""
+" requested by the user either cannot be seen due to missing permissions, is "
+"invalid or doesn't exist."
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:399
+msgid " Subscribers"
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:230
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:334
+msgid " Views"
+msgstr ""
+
+#: app/Services/ImportExportHandler.php:591
+msgid ". Invalid characters in column name!"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Aliexpress.php:136
+msgid "AliExpress"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Aliexpress.php:128
+msgid "AliExpress reviews not found!"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Amazon.php:202
+msgid "Amazon"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:120
+msgid "Approve WP Social Ninja"
+msgstr ""
+
+#: app/Http/Controllers/ManagersController.php:50
+#: app/Http/Controllers/ManagersController.php:76
+#: app/Http/Controllers/ManagersController.php:97
+msgid "Associate user could not be found with this email"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:314
+msgid "Author Company"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:308
+msgid "Author Position"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:320
+msgid "Author Website Logo"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:326
+msgid "Author Website URL"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Booking.php:209
+msgid "Booking.com"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Trustpilot.php:176
+#: app/Services/Platforms/Reviews/Tripadvisor.php:265
+#: app/Services/Platforms/Reviews/Tripadvisor.php:761
+#: app/Services/Platforms/Reviews/Amazon.php:125
+#: app/Services/Platforms/Reviews/Amazon.php:231
+#: app/Services/Platforms/Reviews/Booking.php:135
+msgid "Can't fetch reviews due to slow network, please try again"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:340
+msgid "Category"
+msgstr ""
+
+#: wp-social-ninja-pro-boot.php:65
+msgid "Click Here to Activate the Plugin"
+msgstr ""
+
+#: wp-social-ninja-pro-boot.php:62
+msgid "Click Here to Install the Plugin"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:286
+msgid "Comment"
+msgstr ""
+
+#: app/Hooks/Handlers/FacebookTemplateHandlerPro.php:204
+msgid "Comments"
+msgstr ""
+
+#: app/Services/ImportExportHandler.php:444
+msgid ""
+"Connected sources config is missing, please connect the platform before "
+"exporting feeds."
+msgstr ""
+
+#: app/Services/ImportExportHandler.php:670
+msgid "Data is not uploaded!!"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Display your social feeds, reviews and chat widgets automatically and easily "
+"on your website with the all-in-one social media plugin."
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:274
+msgid "Email"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/FacebookBusiness.php:85
+msgid "Facebook"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/FacebookBusiness.php:71
+msgid "Facebook Business Reviews Successfully Saved"
+msgstr ""
+
+#: app/Services/ImportExportHandler.php:337
+msgid "Failed to add post meta."
+msgstr ""
+
+#: app/Services/ImportExportHandler.php:332
+msgid "Failed to create post."
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Aliexpress.php:74
+msgid "Field should not be empty!"
+msgstr ""
+
+#: app/Services/ImportExportHandler.php:318
+#: app/Services/ImportExportHandler.php:348
+#: app/Services/ImportExportHandler.php:404
+msgid "File is empty or invalid."
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:367
+msgid "Fluent Forms"
+msgstr ""
+
+#: app/Services/ImportExportHandler.php:736
+msgid "Fluent Forms is not installed. Please install Fluent Forms to proceed."
+msgstr ""
+
+#: app/Hooks/Handlers/TiktokTemplateHandlerPro.php:80
+#: app/Hooks/Handlers/TwitterTemplateHandlerPro.php:349
+#: app/Hooks/Handlers/InstagramTemplateHandlerPro.php:252
+msgid "Followers"
+msgstr ""
+
+#: app/Hooks/Handlers/TiktokTemplateHandlerPro.php:82
+#: app/Hooks/Handlers/TwitterTemplateHandlerPro.php:342
+msgid "Following"
+msgstr ""
+
+#: app/Hooks/Handlers/ChatHandler.php:51
+#: app/Hooks/Handlers/CustomFilterHandlerPro.php:83
+msgid "Friday"
+msgstr ""
+
+#: app/Views/public/feeds-templates/facebook/elements/event.php:73
+msgid "going"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://wpsocialninja.com/"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:292
+msgid "Image"
+msgstr ""
+
+#: app/Views/public/feeds-templates/facebook/elements/event.php:68
+msgid "interested"
+msgstr ""
+
+#: app/Services/ImportExportHandler.php:307
+msgid "Invalid JSON format."
+msgstr ""
+
+#: app/Hooks/Handlers/TiktokTemplateHandlerPro.php:78
+msgid "Likes"
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:283
+msgid "LIVE NOW"
+msgstr ""
+
+#: app/Http/Controllers/ManagersController.php:62
+msgid "Manager has been added"
+msgstr ""
+
+#: app/Http/Controllers/ManagersController.php:106
+msgid "Manager has been deleted"
+msgstr ""
+
+#: app/Http/Controllers/ManagersController.php:87
+msgid "Manager has been updated"
+msgstr ""
+
+#: app/Hooks/Handlers/ChatHandler.php:47
+#: app/Hooks/Handlers/CustomFilterHandlerPro.php:79
+msgid "Monday"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:268
+msgid "Name"
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:488
+msgid "Next"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/WooCommerce/WooCommerce.php:102
+msgid "No reviews found for this product!"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Trustpilot.php:231
+#: app/Services/Platforms/Reviews/Booking.php:195
+#: app/Services/Platforms/Reviews/WooCommerce/WooCommerce.php:123
+msgid "No reviews Found!"
+msgstr ""
+
+#: app/Hooks/Handlers/ReviewsTemplateHandlerPro.php:42
+msgid "No templates found!! Please save template and try again"
+msgstr ""
+
+#: app/Views/public/reviews-templates/notification.php:68
+msgid "on"
+msgstr ""
+
+#: app/Views/public/feeds-templates/facebook/elements/event.php:61
+msgid "Online Event"
+msgstr ""
+
+#: app/Views/public/reviews-templates/business_info.php:23
+msgid "Overall Rating"
+msgstr ""
+
+#: app/Services/ImportExportHandler.php:362
+#: app/Services/ImportExportHandler.php:416
+msgid "Platform name is missing."
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:49
+msgid "Please enter a channel id to fetch videos!! "
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:58
+msgid "Please enter a valid channel Handle!! "
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Trustpilot.php:236
+#: app/Services/Platforms/Reviews/Tripadvisor.php:198
+#: app/Services/Platforms/Reviews/Amazon.php:193
+#: app/Services/Platforms/Reviews/Booking.php:200
+msgid "Please enter a valid url!"
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:19
+msgid "Please enter playlist id to fetch videos!! "
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:34
+msgid "Please enter search term to fetch videos!! "
+msgstr ""
+
+#: app/Services/Platforms/Reviews/WooCommerce/WooCommerce.php:66
+msgid "Please provide a valid product id!!"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Amazon.php:188
+msgid "Please try again after few minutes!"
+msgstr ""
+
+#: app/Services/ImportExportHandler.php:282
+msgid "Please upload a valid CSV or JSON file."
+msgstr ""
+
+#: app/Hooks/Handlers/InstagramTemplateHandlerPro.php:246
+msgid "Posts"
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:487
+msgid "Prev"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:262
+msgid "Ratings"
+msgstr ""
+
+#. %s: reviews count
+#: app/Services/Platforms/Reviews/WooCommerce/WooProductTemplate.php:50
+msgid "Reviews"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/YelpBusiness.php:249
+#: app/Services/Platforms/Reviews/FacebookBusiness.php:397
+#: app/Services/Platforms/Reviews/WooCommerce/WooCommerce.php:239
+msgid "Reviews synced successfully!"
+msgstr ""
+
+#: app/Hooks/Handlers/ChatHandler.php:45
+#: app/Hooks/Handlers/CustomFilterHandlerPro.php:77
+msgid "Saturday"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:216
+msgid "Select"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/WooCommerce/WooProductAdmin.php:97
+msgid "Select a Template"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/WooCommerce/WooProductAdmin.php:98
+msgid "Select Template"
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:254
+msgid "Streamed "
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:412
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:414
+msgid "Subscribe"
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:146
+msgid "Subscribers"
+msgstr ""
+
+#: app/Services/ImportExportHandler.php:341
+#: app/Services/ImportExportHandler.php:678
+msgid "Successfully uploaded data."
+msgstr ""
+
+#: app/Hooks/Handlers/ChatHandler.php:46
+#: app/Hooks/Handlers/CustomFilterHandlerPro.php:78
+msgid "Sunday"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:215
+msgid "Switch to Testimonial Mode"
+msgstr ""
+
+#: app/Hooks/Handlers/ReviewsTemplateHandlerPro.php:26
+msgid "Testimonial"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:235
+msgid "The selected service doesn't have any field settings."
+msgstr ""
+
+#: app/Hooks/Handlers/ChatHandler.php:50
+#: app/Hooks/Handlers/CustomFilterHandlerPro.php:82
+msgid "Thursday"
+msgstr ""
+
+#: app/Services/ImportExportHandler.php:445
+msgid "TikTok is not installed. Please install and connect TikTok to proceed."
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:280
+msgid "Title"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Tripadvisor.php:663
+msgid "Tripadvisor"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Trustpilot.php:78
+#: app/Services/Platforms/Reviews/Trustpilot.php:245
+msgid "Trustpilot"
+msgstr ""
+
+#: app/Hooks/Handlers/ChatHandler.php:48
+#: app/Hooks/Handlers/CustomFilterHandlerPro.php:80
+msgid "Tuesday"
+msgstr ""
+
+#: app/Hooks/Handlers/TwitterTemplateHandlerPro.php:335
+msgid "Tweets"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Tripadvisor.php:165
+msgid ""
+"Unable to retrieve reviews right now. Please try again later or check if "
+"reviews are available for this business."
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:298
+msgid "URL"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Trustpilot.php:150
+#: app/Services/Platforms/Reviews/Tripadvisor.php:192
+#: app/Services/Platforms/Reviews/Amazon.php:70
+#: app/Services/Platforms/Reviews/Booking.php:76
+msgid "URL field should not be empty!"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:102
+msgid "Validation Failed"
+msgstr ""
+
+#: app/Services/ImportExportHandler.php:443
+msgid ""
+"Verification config is missing, please connect the platform before exporting "
+"feeds."
+msgstr ""
+
+#: app/Services/ImportExportHandler.php:446
+msgid ""
+"Verification configs are missing, please connect the platform before "
+"exporting feeds."
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:155
+msgid "Videos"
+msgstr ""
+
+#: app/Hooks/Handlers/YouTubeTemplateHandlerPro.php:164
+msgid "Views"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/YelpBusiness.php:72
+msgid ""
+"We can't fetch any reviews from this business name, Please check your place "
+"id is correct or not."
+msgstr ""
+
+#: app/Services/Platforms/Reviews/FacebookBusiness.php:102
+msgid "We could not find any reviews from this page."
+msgstr ""
+
+#: app/Hooks/Handlers/ChatHandler.php:49
+#: app/Hooks/Handlers/CustomFilterHandlerPro.php:81
+msgid "Wednesday"
+msgstr ""
+
+#: app/Views/public/feeds-templates/facebook/elements/event.php:74
+msgid "went"
+msgstr ""
+
+#: app/Views/public/reviews-templates/write-a-review-btn.php:70
+msgid "Where would you like to leave a review?"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/WooCommerce/WooCommerce.php:32
+msgid "WooCommerce"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:115
+#: app/Services/Platforms/Reviews/WooCommerce/WooProductAdmin.php:45
+msgid "WP Social Ninja"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:166
+msgid "WP Social Ninja activated!"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/WooCommerce/WooProductAdmin.php:90
+msgid "WP Social Ninja Integration"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:116
+msgid ""
+"WP Social Ninja is the all-in-one WordPress plugin for automatically "
+"integrating your social media reviews, news feeds, and chat functionalities."
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:160
+msgid "WP Social Ninja Module Deactivated!"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:119
+msgid "WP Social Ninja need to approve first "
+msgstr ""
+
+#. Name of the plugin
+msgid "WP Social Ninja Pro"
+msgstr ""
+
+#. Author of the plugin
+msgid "WP Social Ninja Team - WPManageNinja LLC"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/YelpBusiness.php:61
+msgid "Yelp"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/YelpBusiness.php:46
+msgid "Yelp Business Reviews Successfully Saved"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/FacebookBusiness.php:366
+msgid "You are Successfully Verified"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/WooCommerce/WooProductAdmin.php:92
+msgid ""
+"You can choose the template that will be included in the product reviews tab."
+msgstr ""
+
+#: app/Services/Platforms/Feeds/Instagram/HashtagFeed.php:168
+msgid "You need a business account to get hashtag feed!!"
+msgstr ""
+
+#: app/Services/Platforms/Feeds/Instagram/TaggedFeed.php:67
+msgid "You need business account to get tagged feed!!"
+msgstr ""
+
+#: app/Services/License.php:48
+msgid "Your license key has been successfully updated"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Fluentform.php:118
+msgid "Your WP Social Ninja integration activated"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Zomato.php:60
+msgid "Zomato Business"
+msgstr ""
+
+#: app/Services/Platforms/Reviews/Zomato.php:39
+msgid "Zomato Business Reviews successfully saved"
+msgstr ""

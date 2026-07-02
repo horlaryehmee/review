@@ -1,0 +1,70 @@
+/* Review9ja Explore Listings (Alt) */
+.review9ja-explore-duplicate.review9ja-explore-variant {
+  --review9ja-explore-accent: #4b6bff;
+  --review9ja-explore-bg: #f4f6fb;
+  --review9ja-explore-card: #ffffff;
+  --review9ja-explore-border: #e6eaf2;
+  --review9ja-explore-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  --review9ja-explore-radius: 18px;
+  --accent: var(--review9ja-explore-accent);
+}
+
+.review9ja-explore-duplicate.review9ja-explore-variant .cts-explore {
+  background: var(--review9ja-explore-bg);
+}
+
+.review9ja-explore-duplicate.review9ja-explore-variant .finder-search,
+.review9ja-explore-duplicate.review9ja-explore-variant .finder-listings,
+.review9ja-explore-duplicate.review9ja-explore-variant .finder-map {
+  background: var(--review9ja-explore-card);
+  border-radius: var(--review9ja-explore-radius);
+  box-shadow: var(--review9ja-explore-shadow);
+  border: 1px solid var(--review9ja-explore-border);
+}
+
+.review9ja-explore-duplicate.review9ja-explore-variant .finder-map {
+  overflow: hidden;
+}
+
+.review9ja-explore-duplicate.review9ja-explore-variant .finder-search {
+  padding: 24px 20px 12px;
+}
+
+.review9ja-explore-duplicate.review9ja-explore-variant .finder-listings {
+  background: var(--review9ja-explore-bg);
+}
+
+.review9ja-explore-duplicate.review9ja-explore-variant .finder-listings .lf-item,
+.review9ja-explore-duplicate.review9ja-explore-variant .finder-listings .lf-item-container {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e9edf5;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.review9ja-explore-duplicate.review9ja-explore-variant .finder-search .form-group input,
+.review9ja-explore-duplicate.review9ja-explore-variant .finder-search .form-group select,
+.review9ja-explore-duplicate.review9ja-explore-variant .finder-search .form-group .select2-selection {
+  border-radius: 12px;
+  border-color: var(--review9ja-explore-border);
+  box-shadow: none;
+}
+
+.review9ja-explore-duplicate.review9ja-explore-variant .fl-head {
+  padding: 6px 4px 12px;
+}
+
+.review9ja-explore-duplicate.review9ja-explore-variant .c27-explore-search-button,
+.review9ja-explore-duplicate.review9ja-explore-variant a.reset-results-27,
+.review9ja-explore-duplicate.review9ja-explore-variant .load-more-btn a {
+  border-radius: 999px;
+}
+
+@media (max-width: 1200px) {
+  .review9ja-explore-duplicate.review9ja-explore-variant .finder-search,
+  .review9ja-explore-duplicate.review9ja-explore-variant .finder-listings,
+  .review9ja-explore-duplicate.review9ja-explore-variant .finder-map {
+    border-radius: 14px;
+  }
+}
+

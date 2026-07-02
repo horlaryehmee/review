@@ -1,0 +1,27 @@
+// =====================================================
+//  WSH — Syntax Highlighter: language group sections
+// =====================================================
+
+.wpd-pro-teaser-body {
+
+    // Section heading (Common / Middle / Full)
+    .wsh-pro-lang-h2 {
+        margin-bottom: 0;
+        font-size: 15px;
+        color: #555;
+    }
+
+    // Checkbox grid inside each language group
+    .wsh-pro-multi-check {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+}
+
+// RTL
+body.rtl .wpd-pro-teaser-body {
+    .wsh-pro-multi-check {
+        padding-left: 0;
+        padding-right: 10px;
+    }
+}

@@ -1,0 +1,37 @@
+/* Review list layout + small rating */
+body.single-job_listing .comments-list .comment-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+}
+
+body.single-job_listing .comments-list .comment-head h5 {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+}
+
+body.single-job_listing .comments-list .comment-head .comment-date {
+  flex: 1 1 100%;
+  order: 3;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+body.single-job_listing .comments-list .comment-head .listing-review-rating {
+  order: 2;
+  margin-left: auto;
+  flex: 0 0 auto;
+  --review9ja-star-size: 12px;
+  --review9ja-star-icon-size: 8px;
+  --review9ja-star-radius: 3px;
+  --review9ja-star-gap: 2px;
+}
+
+@media (max-width: 480px) {
+  body.single-job_listing .comments-list .comment-head .listing-review-rating {
+    --review9ja-star-size: 11px;
+    --review9ja-star-icon-size: 7px;
+  }
+}

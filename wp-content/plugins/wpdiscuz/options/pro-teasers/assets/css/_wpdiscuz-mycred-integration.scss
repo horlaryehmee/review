@@ -1,0 +1,64 @@
+// =====================================================
+//  WMI — myCRED Integration: section headings + points inputs + notice
+// =====================================================
+@use 'variables' as *;
+
+$wmi-warning-color: #dba617;
+$wmi-warning-bg:    #fef9e7;
+
+// Section-name rows (full-width opt-name with bold heading)
+.wpd-pro-teaser-body .wmi-section-name {
+    width: 100%;
+    font-weight: 600;
+    padding-bottom: 0;
+}
+
+// Dashicons inside opt-name need vertical alignment
+.wpd-pro-teaser-body .wmi-section-name .dashicons {
+    vertical-align: middle;
+}
+
+// Points text inputs — right margin to separate from the unit label
+.wpd-pro-teaser-body .wmi-points-input { margin-right: 6px; }
+
+// RTL
+body.rtl .wpd-pro-teaser-body .wmi-points-input {
+    margin-right: 0;
+    margin-left: 6px;
+}
+
+.wmi-notice {
+    background: $wmi-warning-bg;
+    border-left: 4px solid $wmi-warning-color;
+    border-radius: 3px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.wmi-notice-icon {
+    color: $wmi-warning-color;
+    font-size: 22px;
+    line-height: 1.3;
+    flex-shrink: 0;
+}
+
+.wmi-notice-title {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: $wmi-warning-color;
+    margin-bottom: 4px;
+}
+
+.wmi-notice-body {
+    font-size: 13px;
+    color: #3c434a;
+}
+
+body.rtl .wmi-notice {
+    border-left: none;
+    border-right: 4px solid $wmi-warning-color;
+}

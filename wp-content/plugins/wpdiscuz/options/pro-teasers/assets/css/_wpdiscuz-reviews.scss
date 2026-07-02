@@ -1,0 +1,216 @@
+// =====================================================
+//  WR — Reviews: accordion, label rows, shortcode docs, tables
+// =====================================================
+
+.wpd-pro-teaser-body {
+
+    // Numbered label inputs — 2-column grid
+    .wr-pro-labels-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+        margin-top: 6px;
+    }
+
+    .wr-pro-label-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        min-width: 0;
+
+        .wr-pro-label-num {
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: #e0e0e0;
+            border-radius: 50%;
+            font-size: 11px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        // !important needed: #wpd-setbox .wpd-setbox-body input[type="text"] { width: 318px } has higher specificity
+        input[type="text"] {
+            flex: 1;
+            min-width: 0;
+            width: 100% !important;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 3px 4px;
+        }
+    }
+
+    // Settings accordion — replicate wr-accordion styles (wr-backend.min.css not loaded when plugin is inactive)
+    // All items forced open (no interaction — this is a teaser)
+    .wr-settings-accordion {
+
+        .wr-accordion-item {
+            margin: 7px 0;
+        }
+
+        .wr-accordion-title {
+            position: relative;
+            padding: 4px 50px 4px 4px;
+            cursor: default;
+            display: block;
+            border: 1px solid #d3d3d3;
+            background-color: #00b38f;
+            color: #f0f0f0;
+
+            &::after {
+                content: "\f139";
+                font-family: dashicons;
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%) rotateZ(90deg);
+                font-size: 25px;
+            }
+
+            .wr-accordion-title-text {
+                padding: 7px 0 7px 15px;
+                font-weight: normal;
+                font-size: 1.1rem;
+            }
+        }
+
+        .wr-accordion-content {
+            display: block;
+        }
+    }
+
+    // Shortcode documentation — replicate wr-backend-styles.scss
+    .wr-shortcode-item {
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f1;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .wr-shortcode-title {
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 10px;
+
+        .dashicons {
+            font-size: 16px;
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .wr-shortcode-body {
+        margin-top: 6px;
+    }
+
+    .wr-shortcode-pill {
+        font-size: 11px;
+        background: #f1f1f1;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 1px 6px;
+        color: #666;
+        margin: 0 4px;
+        vertical-align: middle;
+        font-family: monospace;
+    }
+
+    .wr-shortcode-attr-list {
+        list-style: disc;
+        padding-inline-start: 20px;
+        margin: 8px 0;
+    }
+
+    .wr-shortcode-nested-list {
+        list-style: circle;
+        margin-inline-start: 25px;
+        padding-inline-start: 0;
+    }
+
+    // Review gate + JSON-LD tables — replicate wr-backend-styles.scss
+    .wr-gate-posttypes-table,
+    .wr-jsonld-posttypes-table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 440px;
+
+        th,
+        td {
+            padding: 6px 8px;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f1;
+            vertical-align: middle;
+            box-sizing: border-box;
+        }
+
+        th {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #50575e;
+        }
+
+        code {
+            font-size: 11px;
+            color: #646970;
+            background: #f0f0f1;
+            padding: 1px 4px;
+            border-radius: 2px;
+            margin-inline-start: 4px;
+        }
+
+        // !important needed: #wpd-setbox .wpd-setbox-body input[type="text"] { width: 318px } has higher specificity
+        input[type="text"],
+        select {
+            width: 100% !important;
+            box-sizing: border-box;
+        }
+    }
+
+    // Post type / taxonomy sub-headings in Access section
+    .wr-postype-subtitle {
+        margin-top: 20px;
+    }
+
+    .wr-subtitle {
+        margin-top: 20px;
+    }
+
+    // wr-note inline note spans (replicate wr-backend-styles.scss)
+    .wr-note {
+        display: block;
+        margin-top: 4px;
+
+        &.wr-error {
+            color: #b32d2e;
+        }
+    }
+}
+
+// RTL
+body.rtl .wpd-pro-teaser-body {
+
+    .wr-pro-label-row {
+        .wr-pro-label-num {
+            margin-right: 0;
+            margin-left: 8px;
+        }
+    }
+
+    .wr-gate-posttypes-table,
+    .wr-jsonld-posttypes-table {
+        th,
+        td {
+            text-align: right;
+        }
+    }
+}

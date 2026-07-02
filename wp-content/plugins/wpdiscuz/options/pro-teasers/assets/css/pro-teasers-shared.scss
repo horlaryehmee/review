@@ -1,0 +1,576 @@
+// =====================================================
+//  wpDiscuz Pro Teasers — shared styles
+//  Compiles to pro-teasers-shared.css
+//
+//  Addon-specific partials (imported below):
+//    _bpi.scss  — BuddyPress Integration (settings img)
+//    _fem.scss  — Front-end Moderation (no addon-specific CSS)
+//    _wam.scss  — Ads Manager (cache button)
+//    _wcai.scss — Comment Author Info (no addon-specific CSS)
+//    _wgi.scss  — GIPHY Integration (logo image)
+//    _widg.scss — Widgets Addon (style images + custom CSS textarea)
+//    _wmi.scss  — myCRED Integration (section headings + point inputs)
+//    _wmu.scss  — Media Uploader (no addon-specific CSS)
+//    _wou.scss  — Online Users (no addon-specific overrides)
+//    _wpc.scss  — Private Commenting (no addon-specific CSS)
+//    _wpds.scss — Comment Search (fields checkbox wrapper)
+//    _wrc.scss  — Google reCAPTCHA (no addon-specific CSS)
+//    _wrf.scss  — Comment Reporting (option-entry row)
+//    _wsbm.scss — Subscription Manager (mock table + intro list)
+//    _wsh.scss  — Syntax Highlighter (lang groups)
+//    _wti.scss  — Tenor Integration (logo image)
+//    _wucm.scss — User & Comment Mentioning (no addon-specific CSS)
+//    _wun.scss  — User Notifications (switcher/bells/colors/phrases)
+//    _wv.scss   — Advanced Likers (level cards)
+//    _wvc.scss  — Voice Commenting (no addon-specific CSS)
+//    _we.scss   — Embeds (oEmbed provider grid)
+//    _wsm.scss  — Emoticons (sticker images + custom stickers table)
+//    _wr.scss   — Reviews (label rows, schema table, taxonomy accordion force-open)
+// =====================================================
+
+@use 'variables' as *;
+@use 'wpdiscuz-buddypress-integration';
+@use 'wpdiscuz-frontend-moderation';
+@use 'wpdiscuz-ads-manager';
+@use 'wpdiscuz-comment-author-info';
+@use 'wpdiscuz-giphy-integration';
+@use 'wpdiscuz-widgets';
+@use 'wpdiscuz-mycred-integration';
+@use 'wpdiscuz-media-uploader';
+@use 'wpdiscuz-online-users';
+@use 'wpdiscuz-private-commenting';
+@use 'wpdiscuz-comment-search';
+@use 'wpdiscuz-google-recaptcha';
+@use 'wpdiscuz-comment-reporting';
+@use 'wpdiscuz-subscription-manager';
+@use 'wpdiscuz-syntax-highlighter';
+@use 'wpdiscuz-tenor-integration';
+@use 'wpdiscuz-user-comment-mentioning';
+@use 'wpdiscuz-user-notifications';
+@use 'wpdiscuz-advanced-likers';
+@use 'wpdiscuz-voice-commenting';
+@use 'wpdiscuz-embeds';
+@use 'wpdiscuz-emoticons';
+@use 'wpdiscuz-reviews';
+
+
+// =====================================================
+//  Accordion wrapper
+// =====================================================
+
+.wpd-pro-teaser-wrap {
+  margin-top: 20px;
+  border: 1px solid $gold-border;
+  border-radius: $border-radius;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(200, 168, 0, 0.15);
+}
+
+// Header
+.wpd-pro-teaser-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 18px;
+  background: $gold-bg;
+  cursor: pointer;
+  border-bottom: 1px solid $gold-border;
+  border-radius: $border-radius $border-radius 0 0;
+  user-select: none;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: $gold-bg-hover;
+  }
+
+  .wpd-pro-teaser-wrap.wpd-pro-collapsed & {
+    border-bottom: none;
+    border-radius: $border-radius;
+  }
+}
+
+.wpd-pro-teaser-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: $gold-dark-text;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    color: $gold-border;
+  }
+}
+
+.wpd-pro-teaser-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+// Unlock hint
+.wpd-pro-unlock-hint {
+  font-size: 12px;
+  color: $gold-hint-text;
+  font-style: italic;
+  font-weight: 400;
+}
+
+// PRO badge (accordion header only)
+.wpd-pro-badge {
+  display: inline-block;
+  background: $red-flat;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+  letter-spacing: 0.8px;
+  vertical-align: middle;
+  margin-left: 6px;
+  line-height: 1.6;
+  box-shadow: 0 1px 3px $red-badge-shadow;
+}
+
+// Toggle chevron
+.wpd-pro-toggle-icon {
+  font-size: 10px;
+  color: $gold-hint-text;
+  transition: transform 0.2s ease;
+  display: inline-block;
+
+  .wpd-pro-teaser-wrap.wpd-pro-collapsed & {
+    transform: rotate(180deg);
+  }
+}
+
+// Body
+.wpd-pro-teaser-body {
+  padding: 0 30px 10px;
+  position: relative;
+
+  // Label padding
+  .wpd-opt-name label {
+    padding-top: 4px;
+    display: inline-block;
+  }
+
+  // Disable all interactions
+  .wpd-opt-row {
+    pointer-events: none;
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="number"],
+  input[type="text"],
+  button {
+    cursor: not-allowed;
+  }
+
+  // Native checkboxes — visible size + border so they read clearly at 55% opacity
+  input[type="checkbox"] {
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    outline: 1px solid #999;
+    outline-offset: 1px;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+
+  // Toggle switchers hide their real checkbox — reset the size overrides above
+  .wpd-switcher input[type="checkbox"] {
+    width: auto;
+    height: auto;
+    outline: none;
+    outline-offset: 0;
+    flex-shrink: unset;
+    vertical-align: unset;
+  }
+
+  select {
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  // Shared color wrap (WPDS, WUN, WOU)
+  .wpd-color-wrap {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    // !important needed: #wpd-setbox .wpd-setbox-body input[type="text"] { width: 318px } has higher specificity
+    input[type="text"] {
+      margin: 1px;
+      padding: 3px 5px;
+      width: 110px !important;
+    }
+  }
+
+  .wpd-color-swatch {
+    @include color-swatch(18px);
+  }
+
+  // ---- Shared teaser utility classes ----------------------------------------
+
+  // Intro description block
+  .wpd-opt-intro {
+    text-align: left;
+  }
+
+  // Phrase text inputs (90% wide)
+  // !important needed: #wpd-setbox .wpd-setbox-body input[type="text"] { width: 318px } has higher specificity
+  .wpd-teaser-input {
+    margin: 1px;
+    padding: 3px 5px;
+    width: 90% !important;
+  }
+
+  // Phrase / body textareas
+  .wpd-teaser-textarea {
+    width: 90%;
+  }
+
+  // Number inputs — three widths
+  // !important needed on -sm: main CSS sets input[type="text"] { width: 318px } (embeds player dims use wpd-num-input-sm)
+  .wpd-num-input {
+    width: 80px;
+  }
+
+  .wpd-num-input-sm {
+    width: 70px !important;
+  }
+
+  .wpd-num-input-md {
+    width: 100px;
+  }
+
+  // Full-width text / audio inputs
+  .wpd-input-full {
+    width: 100%;
+  }
+
+  // Teaser images (max-width 100%)
+  img.wpd-teaser-img {
+    max-width: 100%;
+  }
+
+  // Last opt-row — no bottom border
+  .wpd-opt-row.wpd-opt-row-no-border {
+    border-bottom: none;
+  }
+
+  // Subtitle with extra top margin
+  .wpd-subtitle-mt {
+    margin-top: 20px;
+  }
+
+  .wpd-subtitle-mt-lg {
+    margin-top: 28px;
+  }
+
+  // Multi-column checkbox group item (base)
+  .wpd-mublock-inline {
+    display: inline-block;
+    width: 200px;
+    min-width: 33%;
+  }
+
+  // Width modifier variants — combine with .wpd-mublock-inline
+  // Use min-width (not width): #wpd-setbox .wpd-setcon .wpd-mublock-inline { width: 19.5% } would
+  // override a plain width rule; min-width is a separate property not set by that rule so it always wins.
+  .wpd-mublock-wide {
+    min-width: 45%;
+  }
+
+  .wpd-mublock-half {
+    min-width: 49%;
+  }
+
+  .wpd-mublock-full {
+    min-width: 95%;
+  }
+
+  .wpd-mublock-third {
+    min-width: 32%;
+  }
+
+  // Checkbox group label
+  .wpd-check-label {
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
+  // Radio button labels (switch-field style)
+  .wpd-radio-lbl {
+    min-width: 60px;
+  }
+
+  // Colors / lang-groups section — opt-input spanning full row
+  // !important needed: main settings CSS has higher specificity via #wpd-setbox .wpd-setcon .wpd-opt-row .wpd-opt-input
+  .wpd-opt-input-full-row {
+    width: calc(100% - 40px) !important;
+  }
+}
+
+.wpd-pro-teaser-wrap.wpd-pro-collapsed .wpd-pro-teaser-body {
+  display: none;
+}
+
+// CTA footer
+.wpd-pro-teaser-cta {
+  padding: 12px 18px;
+  border-top: 1px solid #e0c840;
+  text-align: right;
+  background: #fef8d0;
+  border-radius: 0 0 $border-radius $border-radius;
+  pointer-events: all;
+
+  a {
+    pointer-events: all;
+    opacity: 1;
+    cursor: pointer;
+    background: $red-flat !important;
+    border-color: $red-border !important;
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 5px $red-shadow;
+    transition: box-shadow 0.2s ease, filter 0.2s ease;
+    padding: 5px 7px;
+
+    &:hover {
+      filter: brightness(1.1);
+      box-shadow: 0 3px 8px $red-shadow-hover;
+    }
+  }
+}
+
+
+// =====================================================
+//  Sidebar PRO teaser indicator (shared class)
+//  JS adds .wpd-pro-teaser-menu-item to <li> elements
+//  whose tab link corresponds to a teaser tab.
+// =====================================================
+
+#wpd-setbox .wpd-setbar li.wpd-pro-teaser-menu-item {
+  background: $gold-bg;
+  border-top: 1px solid $gold-border;
+
+  &:hover {
+    background: $gold-bg-hover;
+  }
+
+  > a {
+    color: $gold-dark-text;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: $gold-hover-text;
+    }
+
+    .wpd-menu-title-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .wpd-menu-title-text {
+      min-width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &::after {
+      @include pro-badge-pseudo();
+    }
+  }
+
+  &.wpd-active {
+    background: $gold-bg-hover;
+    width: calc(100% + 1px);
+
+    > a,
+    a {
+      color: $gold-dark-text;
+    }
+  }
+}
+
+
+// =====================================================
+//  Dashboard home card PRO teaser indicator (shared class)
+//  JS adds .wpd-pro-teaser-dashboard-card to addon cards
+//  whose link corresponds to a teaser tab.
+// =====================================================
+
+#wpd-setbox .wpd-settings-home .wpd-box.wpd-pro-teaser-dashboard-card {
+  border: 1px solid $gold-border;
+  box-shadow: 0 2px 8px rgba(184, 150, 12, 0.2);
+  background: $gold-bg-card;
+
+  .wpd-body {
+    background: transparent;
+
+    &:hover {
+      background: $gold-bg-card-hover;
+    }
+  }
+
+  .wpd-title a {
+    color: $gold-dark-text;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .wpd-addon-title-text {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      min-width: 0;
+    }
+
+    &::after {
+      @include pro-badge-pseudo();
+    }
+  }
+}
+
+
+// =====================================================
+//  Pro Add-ons sidebar menu collapse
+// =====================================================
+
+#wpd-setbox .wpd-setbar .wpd-menu-group-teasers li.wpd-menu-head {
+  cursor: pointer;
+
+  .wpd-pro-addons-count {
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.7;
+    letter-spacing: 0;
+  }
+
+  .wpd-menu-head-new-badge {
+    margin-left: 6px;
+    margin-right: 3px;
+    vertical-align: center;
+    line-height: 1em;
+  }
+}
+
+
+// =====================================================
+//  "NEW" badge — recently published add-ons (< 3 months)
+// =====================================================
+
+@keyframes wpd-new-pulse {
+  0%, 100% {
+    background-color: #00a32a;
+    box-shadow: 0 0 0 0 rgba(0, 163, 42, 0.5);
+  }
+  60% {
+    background-color: #00c130;
+    box-shadow: 0 0 0 5px rgba(0, 163, 42, 0);
+  }
+}
+
+.wpd-new-badge {
+  display: inline-block;
+  flex-shrink: 0;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  background: #00a32a;
+  border-radius: 3px;
+  padding: 2px 5px;
+  margin-right: 5px;
+  vertical-align: middle;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  animation: wpd-new-pulse 1.8s ease-out infinite;
+}
+
+
+// =====================================================
+//  RTL overrides — common
+// =====================================================
+
+body.rtl {
+  .wpd-pro-badge {
+    margin-left: 0;
+    margin-right: 6px;
+  }
+
+  .wpd-new-badge {
+    margin-right: 0;
+    margin-left: 5px;
+  }
+
+  .wpd-menu-head-new-badge {
+    margin-left: 0;
+    margin-right: 6px;
+  }
+
+  .wpd-pro-teaser-cta {
+    text-align: left;
+  }
+
+  .wpd-pro-teaser-header-right {
+    flex-direction: row-reverse;
+  }
+
+  .wpd-pro-teaser-title {
+    flex-direction: row-reverse;
+  }
+
+  .wpd-pro-teaser-body .wpd-color-wrap {
+    flex-direction: row-reverse;
+  }
+
+  .wpd-pro-teaser-body .wpd-mublock-inline {
+    display: inline-block; // keep inline-block direction in RTL
+  }
+
+  .wpd-pro-teaser-body .widg-pro-opt-input-wide {
+    text-align: left;
+  }
+
+  #wpd-setbox .wpd-setbar li.wpd-pro-teaser-menu-item {
+    background: $gold-bg;
+
+    > a::after {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  #wpd-setbox .wpd-settings-home .wpd-box.wpd-pro-teaser-dashboard-card {
+    .wpd-title a {
+      flex-direction: row-reverse;
+
+      &::after {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+  }
+}

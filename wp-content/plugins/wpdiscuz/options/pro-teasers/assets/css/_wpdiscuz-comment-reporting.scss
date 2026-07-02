@@ -1,0 +1,20 @@
+// =====================================================
+//  WRF — Comment Reporting: minus-sign button + option-entry rows
+// =====================================================
+
+.wpd-pro-teaser-body {
+    .report_remove {
+        width: 30px;
+        height: 30px;
+        background: url("../img/minus-sign.png") center no-repeat;
+        background-color: white;
+        border: 0 !important;
+        cursor: default;
+    }
+
+    // Each reporting option row (code+label inside optionType)
+    .wrf-pro-option-entry {
+        display: flex;
+        margin-bottom: 10px;
+    }
+}

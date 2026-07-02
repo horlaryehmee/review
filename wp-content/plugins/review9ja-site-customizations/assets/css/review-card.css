@@ -1,0 +1,538 @@
+/* Review card redesign */
+body.single-job_listing .comments-list > li.single-comment {
+  background: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  margin-bottom: 10px;
+}
+
+body.single-job_listing .comments-list > li.single-comment > .comment-container.r9-review-card {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card {
+  background: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  margin-bottom: 10px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply {
+  background: #f8fafc;
+  border-color: #e6ecf5;
+  box-shadow: none;
+  padding: 10px 12px;
+  margin-bottom: 0;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .r9-verified-badge,
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .r9-verified-label {
+  display: none;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .r9-review-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .r9-review-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .c27-user-avatar {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+  background: var(--r9-avatar-color, #e2e8f0);
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .c27-user-avatar {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .c27-user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .c27-user-avatar .r9-avatar-initial {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 15px;
+  line-height: 1;
+  z-index: 0;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .c27-user-avatar.r9-avatar-fallback img {
+  display: none !important;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .c27-user-avatar.r9-avatar-fallback {
+  background: var(--r9-avatar-color, #e2e8f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .c27-user-avatar img[src*="d=mm"],
+body.single-job_listing .comments-list .comment-container.r9-review-card .c27-user-avatar img[src*="d=mp"],
+body.single-job_listing .comments-list .comment-container.r9-review-card .c27-user-avatar img[src*="d=mystery"],
+body.single-job_listing .comments-list .comment-container.r9-review-card .c27-user-avatar img[src*="d=identicon"],
+body.single-job_listing .comments-list .comment-container.r9-review-card .c27-user-avatar img[src*="d=monsterid"],
+body.single-job_listing .comments-list .comment-container.r9-review-card .c27-user-avatar img[src*="d=wavatar"],
+body.single-job_listing .comments-list .comment-container.r9-review-card .c27-user-avatar img[src*="d=retro"],
+body.single-job_listing .comments-list .comment-container.r9-review-card .c27-user-avatar img[src*="d=robohash"],
+body.single-job_listing .comments-list .comment-container.r9-review-card .c27-user-avatar img[src*="d=blank"] {
+  opacity: 0;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .c27-user-avatar .r9-avatar-initial {
+  font-size: 13px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .c27-user-avatar .r9-avatar-initial {
+  font-size: 12px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .r9-verified-badge {
+  display: none !important;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .r9-verified-badge::before {
+  content: none;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .r9-review-meta {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .r9-review-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  line-height: 1.2;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .r9-review-name h5 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .r9-review-name h5 {
+  font-size: 13px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .r9-verified-label {
+  font-size: 9px;
+  font-weight: 600;
+  color: #3b82f6;
+  background: #e0ecff;
+  border: 1px solid #cfe1ff;
+  padding: 2px 5px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .r9-review-meta-line {
+  margin-top: 0;
+  font-size: 11px;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.2;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .comment-date {
+  font-size: 11px;
+  color: #6b7280;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .r9-review-rating {
+  margin-left: auto;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .listing-review-rating.r9-review-stars {
+  --review9ja-star-size: 11px;
+  --review9ja-star-icon-size: 7px;
+  --review9ja-star-radius: 3px;
+  --review9ja-star-gap: 2px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .listing-review-rating.r9-review-stars {
+  --review9ja-star-size: 10px;
+  --review9ja-star-icon-size: 6px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .comment-body.r9-review-content {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #1f2937;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 6px;
+  column-gap: 10px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-root .comment-body.r9-review-content {
+  grid-template-columns: 1fr auto;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .comment-body.r9-review-content > p {
+  margin: 0;
+  grid-column: 1 / -1;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .comment-body.r9-review-content > p:first-of-type {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .comment-body.r9-review-content > p:last-of-type {
+  margin-bottom: 0;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .comment-info {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  width: auto;
+  float: none;
+  text-align: right;
+  position: static;
+  grid-column: 2;
+  justify-self: end;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-root .cld-like-dislike-wrap {
+  grid-column: 1;
+  justify-self: start;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-root .comment-info {
+  grid-column: 2;
+  justify-self: end;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .comment-info {
+  grid-column: 2;
+  justify-self: end;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .comment-info a {
+  background: #eff4ff;
+  color: #2563eb !important;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border: 1px solid #dbe4ff;
+}
+
+body.single-job_listing .comments-list .r9-review-thread {
+  margin-top: 6px;
+  padding-left: 10px;
+  border-left: 2px solid #edf2f7;
+}
+
+body.single-job_listing .comments-list .r9-review-thread > .replies,
+body.single-job_listing .comments-list .r9-review-replies {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+body.single-job_listing .comments-list .r9-review-replies > li {
+  margin: 0;
+  padding: 0;
+}
+
+body.single-job_listing .comments-list .r9-review-replies > li + li {
+  margin-top: 6px;
+}
+
+body.single-job_listing .comments-list .r9-review-replies .comment-body p {
+  margin: 0;
+}
+
+body.single-job_listing .comments-list .r9-review-thread .comment-container.r9-review-card {
+  margin-bottom: 0;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .cld-like-dislike-wrap {
+  grid-column: 1;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .cld-like-dislike-wrap .cld-common-wrap {
+  min-width: 0;
+  margin-right: 6px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .cld-like-dislike-wrap .cld-like-dislike-trigger {
+  font-size: 12px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply,
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply {
+  padding: 6px 8px;
+  border-radius: 9px;
+  background: #f9fafb;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .r9-review-head,
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .r9-review-head {
+  margin-bottom: 3px;
+  gap: 6px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .r9-review-author,
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .r9-review-author {
+  gap: 6px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .c27-user-avatar,
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .c27-user-avatar {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .r9-review-name h5,
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .r9-review-name h5 {
+  font-size: 11.5px;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .comment-body.r9-review-content,
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .comment-body.r9-review-content {
+  grid-template-columns: 1fr auto;
+  row-gap: 3px;
+  column-gap: 6px;
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .cld-like-dislike-wrap,
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .comment-info,
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .cld-like-dislike-wrap,
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .comment-info {
+  display: none;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply.r9-actions-open .cld-like-dislike-wrap,
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply.r9-actions-open .comment-info,
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply.r9-actions-open .cld-like-dislike-wrap,
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply.r9-actions-open .comment-info {
+  display: inline-flex;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .r9-reply-actions-toggle {
+  margin-left: auto;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 6px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: none;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card .r9-reply-actions-toggle i {
+  font-size: 16px;
+  line-height: 1;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .r9-reply-actions-toggle,
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .r9-reply-actions-toggle {
+  font-size: 10px;
+  padding: 3px 7px;
+  display: inline-flex;
+}
+
+body.single-job_listing .comments-list .comment-container.r9-review-card.r9-actions-open .r9-reply-actions-toggle {
+  background: #e2e8f0;
+  color: #1f2937;
+}
+
+@media (max-width: 600px) {
+  body.single-job_listing .comments-list > li.single-comment {
+    padding: 10px 10px;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card .r9-review-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .r9-review-head,
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .r9-review-head {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card .r9-review-rating {
+    margin-left: 0;
+  }
+
+  body.single-job_listing .comments-list .r9-review-thread {
+    padding-left: 6px;
+    margin-top: 4px;
+    border-left-width: 1px;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card .comment-body.r9-review-content {
+    grid-template-columns: 1fr;
+    row-gap: 6px;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card .comment-info {
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-root .comment-body.r9-review-content {
+    grid-template-columns: 1fr auto;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-root .comment-info {
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .comment-body.r9-review-content,
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .comment-body.r9-review-content {
+    grid-template-columns: 1fr auto;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .comment-info,
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .comment-info {
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply,
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply {
+    padding: 5px 7px;
+    border-radius: 7px;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .c27-user-avatar,
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .c27-user-avatar {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .r9-review-name h5,
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .r9-review-name h5 {
+    font-size: 10.5px;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .r9-review-meta-line,
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .r9-review-meta-line {
+    font-size: 9.5px;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .r9-reply-actions-toggle,
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .r9-reply-actions-toggle {
+    padding: 1px 4px;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .r9-reply-actions-toggle i,
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .r9-reply-actions-toggle i {
+    font-size: 13px;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-review-reply .c27-user-avatar .r9-avatar-initial,
+  body.single-job_listing .comments-list .comment-container.r9-review-card.r9-deep-reply .c27-user-avatar .r9-avatar-initial {
+    font-size: 10px;
+  }
+
+  body.single-job_listing .comments-list .r9-review-replies {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  body.single-job_listing .comments-list .r9-review-replies > li {
+    margin-top: 0;
+  }
+
+  body.single-job_listing .comments-list .r9-review-replies > li + li {
+    margin-top: 4px;
+  }
+
+  body.single-job_listing .comments-list .r9-review-replies .comment-body.r9-review-content {
+    row-gap: 2px;
+  }
+}
+
+@media (max-width: 420px) {
+  body.single-job_listing .comments-list .comment-container.r9-review-card .r9-review-name h5 {
+    font-size: 13px;
+  }
+
+  body.single-job_listing .comments-list .comment-container.r9-review-card .comment-body.r9-review-content {
+    font-size: 12.5px;
+  }
+}

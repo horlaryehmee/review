@@ -1,0 +1,55 @@
+// =====================================================
+//  wpDiscuz Pro Teasers — variables & mixins
+// =====================================================
+
+// ---- Gold palette (accordion, sidebar, dashboard card) ----
+
+$gold-border:            #b8960c;
+$gold-dark-text:         #3d2800;
+$gold-hint-text:         #6b4800;
+$gold-hover-text:        #1e1400;
+$gold-bg:                #fffbdd;
+$gold-bg-hover:          #fff6b8;
+$gold-bg-card:           #fffbdd;
+$gold-bg-card-hover:     #fff6b8;
+
+// ---- Red palette (PRO badge, CTA button) ----
+
+$red-flat:               #c0392b;
+$red-border:             #9b2c1f;
+$red-shadow:             rgba(150, 40, 30, 0.3);
+$red-shadow-hover:       rgba(150, 40, 30, 0.45);
+$red-badge-shadow:       rgba(150, 40, 30, 0.35);
+
+// ---- Misc ----
+
+$border-radius:          6px;
+
+// ---- Mixins ----
+
+// PRO badge ::after — used in sidebar and dashboard card
+@mixin pro-badge-pseudo($font-size: 9px, $margin-left: auto) {
+    content: "PRO";
+    display: inline-block;
+    background: $red-flat;
+    color: #fff;
+    font-size: $font-size;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 3px;
+    letter-spacing: 0.8px;
+    line-height: 1.6;
+    vertical-align: middle;
+    margin-left: $margin-left;
+    box-shadow: 0 1px 3px $red-badge-shadow;
+}
+
+// Color swatch — parameterised for 18px (shared) and 16px (WV level cards)
+@mixin color-swatch($size: 18px) {
+    display: inline-block;
+    width: $size;
+    height: $size;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}

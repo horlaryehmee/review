@@ -1,0 +1,37 @@
+// =====================================================
+//  WIDG — Widgets Addon: style preview images + custom CSS textarea
+// =====================================================
+
+.wpd-pro-teaser-body {
+
+    // MVC votes-style and avatar-style preview images
+    .widg-pro-mvc-img {
+        padding: 3px;
+        box-sizing: border-box;
+        width: 200px;
+        border: 2px solid #888;
+        box-shadow: none;
+    }
+
+    .widg-pro-avatar-img {
+        padding: 3px;
+        box-sizing: border-box;
+        width: 200px;
+        box-shadow: 2px 2px 6px #bbb;
+    }
+
+    // Narrow name + wide input layout for the custom CSS row
+    .widg-pro-opt-name-narrow { width: 28%; }
+    .widg-pro-opt-input-wide  { width: 69%; text-align: right; }
+
+    // Custom CSS preview textarea — monospace, LTR even in RTL context
+    .widg-pro-custom-css-ta {
+        width: 90%;
+        height: 100px;
+        color: #333;
+        font-family: 'Courier New', Courier, monospace;
+        background: #f5f5f5;
+        direction: ltr;
+        text-align: left;
+    }
+}

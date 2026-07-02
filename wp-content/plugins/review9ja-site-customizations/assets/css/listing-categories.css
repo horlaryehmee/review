@@ -1,0 +1,66 @@
+.elementor-widget-review9ja-listing-categories .review9ja-lc-grid {
+    --review9ja-lc-columns: 4;
+    --review9ja-lc-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(var(--review9ja-lc-columns), minmax(0, 1fr));
+    gap: var(--review9ja-lc-gap);
+}
+
+.elementor-widget-review9ja-listing-categories .review9ja-lc-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(16, 24, 40, 0.08);
+    padding: 24px 16px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #1f2937;
+    min-height: 132px;
+    transition: box-shadow 0.2s ease;
+}
+
+.elementor-widget-review9ja-listing-categories .review9ja-lc-card:hover,
+.elementor-widget-review9ja-listing-categories .review9ja-lc-card:focus {
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(16, 24, 40, 0.08);
+}
+
+.elementor-widget-review9ja-listing-categories .review9ja-lc-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 999px;
+    background: var(--review9ja-lc-icon-bg, rgba(0, 0, 0, 0.08));
+    color: var(--review9ja-lc-icon-color, #f24286);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.elementor-widget-review9ja-listing-categories .review9ja-lc-icon i {
+    font-size: 22px;
+    line-height: 1;
+    color: inherit;
+}
+
+.elementor-widget-review9ja-listing-categories .review9ja-lc-icon .term-icon.image-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elementor-widget-review9ja-listing-categories .review9ja-lc-icon svg,
+.elementor-widget-review9ja-listing-categories .review9ja-lc-icon img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.elementor-widget-review9ja-listing-categories .review9ja-lc-name {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #2a2f36;
+}

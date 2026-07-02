@@ -1,0 +1,173 @@
+// =====================================================
+//  WSBM — Subscription Manager: list-table page preview
+// =====================================================
+@use 'variables' as *;
+
+// Intro bullet list and paragraph
+.wpd-pro-teaser-body .wsbm-pro-intro-list {
+    margin: 8px 0 0 18px;
+    list-style: disc;
+}
+
+.wpd-pro-teaser-body .wsbm-pro-intro-p {
+    margin: 8px 0 0;
+}
+
+// tablenav top inside page preview
+.wpd-wsbm-page-preview .tablenav.top { margin: 0 0 4px; }
+
+// Checkbox column width
+.wpd-wsbm-page-preview .wpd-wsbm-cb-col { width: 28px; }
+
+// Wrapper that gives each page preview a slight inset look.
+// Scoped inside .wpd-pro-teaser-body so it inherits the same
+// dimmed / pointer-disabled treatment as .wpd-opt-row elements.
+.wpd-pro-teaser-body .wpd-wsbm-page-preview {
+    background: #f6f7f7;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 12px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    opacity: 0.55;
+    pointer-events: none;
+    cursor: not-allowed;
+
+    // Re-enable selects (matches shared rule: .wpd-pro-teaser-body select)
+    select {
+        pointer-events: auto;
+        cursor: pointer;
+    }
+}
+
+// Sortable-looking column header — mimics WordPress's th.sortable a styles
+// so the header reads as sortable without any anchor tag or URL.
+.wpd-wsbm-page-preview th.sortable .wpd-wsbm-sort-label {
+    display: block;
+    overflow: hidden;
+    float: left;
+    padding: 4px 0;
+    color: #2271b1; // WP admin link colour (same as th.sortable a)
+    cursor: default;
+
+    // Text portion
+    > span:first-child {
+        float: left;
+        padding: 0 4px 0 0;
+    }
+}
+
+// Subscription / follower email cell
+.wpds-subscriber-email,
+.wpds-follower-email {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0073aa !important;
+}
+
+// Post link in the table
+.subscribe-post-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0073aa !important;
+}
+
+// Bell icon: confirmed (green)
+.wpds-confirmed {
+    margin-right: 5px;
+    color: #0d0 !important;
+}
+
+// Bell-slash icon: awaiting (orange)
+.wpds-awaiting-confirmation {
+    margin-right: 5px;
+    color: #f90 !important;
+}
+
+// Trash icon: red
+.wpds-delete {
+    margin-right: 5px;
+    color: #e91013 !important;
+}
+
+// Generic action icons (envelope, eye)
+.wpds-action-icon {
+    margin-right: 5px;
+    color: #555;
+}
+
+// Icon + label wrapper in action cells and status cells
+.wpd-wsbm-action {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+// Text label next to each icon
+.wpd-wsbm-icon-label {
+    font-size: 11px;
+    color: #50575e;
+    margin-left: 3px;
+}
+
+// Statistics block inside each page preview.
+// The addon's wpdsubscribe.css is only loaded on its own admin pages,
+// so we replicate those rules here scoped to our wrapper.
+.wpd-wsbm-stats {
+    margin-top: 16px;
+    max-width: 360px;
+
+    // Row base — mirrors .wpds-stat-all/confirmed/awaiting/subscribers
+    .wpds-stat-all,
+    .wpds-stat-confirmed,
+    .wpds-stat-awaiting,
+    .wpds-stat-subscribers {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px;
+        border-bottom: 1px solid #c0c0c0;
+        overflow: hidden; // clearfix for floated children
+    }
+
+    // Name floats left, count floats right — mirrors the addon CSS
+    .wpds-stat-rowname { float: left;  }
+    .wpds-stat-count   { float: right; }
+
+    // Colours — exact values from wpdsubscribe.css
+    .wpds-stat-all       { color: #006197; }
+    .wpds-stat-confirmed { color: #066a43; }
+    .wpds-stat-awaiting  { color: #7c2006; }
+    // subscribers row has no colour override in the addon CSS
+}
+
+// RTL
+body.rtl {
+    .wpds-confirmed,
+    .wpds-awaiting-confirmation,
+    .wpds-delete,
+    .wpds-action-icon {
+        margin-right: 0;
+        margin-left: 5px;
+    }
+
+    .wpd-wsbm-action {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    .wpd-wsbm-icon-label {
+        margin-left: 0;
+        margin-right: 3px;
+    }
+
+    .wpd-wsbm-page-preview th.sortable .wpd-wsbm-sort-label {
+        float: right;
+
+        > span:first-child {
+            float: right;
+            padding: 0 0 0 4px;
+        }
+    }
+}

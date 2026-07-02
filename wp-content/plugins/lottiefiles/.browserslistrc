@@ -1,0 +1,9 @@
+[production]
+last 1 versions
+> 2%
+IE 10
+
+[development]
+last 1 versions
+> 2%
+IE 10

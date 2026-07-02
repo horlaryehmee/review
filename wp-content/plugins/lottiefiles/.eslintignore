@@ -1,0 +1,18 @@
+# Third party
+**/node_modules
+
+# Build products
+docs/
+build/
+
+# Testing
+coverage/
+
+# Temporary files
+src/context/tracker-provider
+src/host
+src/_components
+src/_enums
+src/components/LottiePlayer
+src/gutenberg-block/backend/views/Import
+src/scripts

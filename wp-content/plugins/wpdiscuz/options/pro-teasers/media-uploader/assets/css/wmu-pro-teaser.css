@@ -1,0 +1,187 @@
+/* =====================================================
+   WMU Pro Teaser — accordion + disabled options styles
+   ===================================================== */
+
+/* Wrapper */
+.wpd-pro-teaser-wrap {
+    margin-top: 20px;
+    border: 1px solid #c8a800;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(200, 168, 0, 0.15);
+}
+
+/* Header */
+.wpd-pro-teaser-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 18px;
+    background: linear-gradient(135deg, #fff8dc 0%, #fff3b0 50%, #ffe066 100%);
+    cursor: pointer;
+    border-bottom: 1px solid #c8a800;
+    border-radius: 6px 6px 0 0;
+    user-select: none;
+    transition: background 0.2s ease;
+}
+
+.wpd-pro-teaser-header:hover {
+    background: linear-gradient(135deg, #fff3b0 0%, #ffe066 50%, #ffd700 100%);
+}
+
+.wpd-pro-teaser-wrap.wpd-pro-collapsed .wpd-pro-teaser-header {
+    border-bottom: none;
+    border-radius: 6px;
+}
+
+.wpd-pro-teaser-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #5a4000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wpd-pro-teaser-title .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    color: #c8a800;
+}
+
+.wpd-pro-teaser-header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Unlock hint */
+.wpd-pro-unlock-hint {
+    font-size: 12px;
+    color: #7a5c00;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* PRO badge */
+.wpd-pro-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #d63638 0%, #a52325 100%);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    letter-spacing: 0.8px;
+    vertical-align: middle;
+    margin-left: 6px;
+    line-height: 1.6;
+    box-shadow: 0 1px 3px rgba(166, 35, 37, 0.4);
+}
+
+/* Toggle chevron */
+.wpd-pro-toggle-icon {
+    font-size: 10px;
+    color: #7a5c00;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.wpd-pro-teaser-wrap.wpd-pro-collapsed .wpd-pro-toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Body */
+.wpd-pro-teaser-body {
+    padding: 0 30px 10px;
+    position: relative;
+}
+
+/* Frosted overlay on the body */
+.wpd-pro-teaser-body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 6px,
+        rgba(255, 240, 100, 0.04) 6px,
+        rgba(255, 240, 100, 0.04) 12px
+    );
+    pointer-events: none;
+    border-radius: 0 0 6px 6px;
+}
+
+/* Label padding — matches the feel of the regular settings rows */
+.wpd-pro-teaser-body .wpd-opt-name label {
+    padding-top: 4px;
+    display: inline-block;
+}
+
+.wpd-pro-teaser-wrap.wpd-pro-collapsed .wpd-pro-teaser-body {
+    display: none;
+}
+
+/* Disable all interactions inside the body */
+.wpd-pro-teaser-body .wpd-opt-row {
+    pointer-events: none;
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.wpd-pro-teaser-body input[type="checkbox"],
+.wpd-pro-teaser-body input[type="number"],
+.wpd-pro-teaser-body input[type="text"] {
+    cursor: not-allowed;
+}
+
+/* CTA footer */
+.wpd-pro-teaser-cta {
+    padding: 12px 18px;
+    border-top: 1px solid #eed;
+    text-align: right;
+    background: #fffdf0;
+    border-radius: 0 0 6px 6px;
+}
+
+.wpd-pro-teaser-cta a {
+    pointer-events: all;
+    opacity: 1;
+    cursor: pointer;
+    background: linear-gradient(135deg, #d63638 0%, #a52325 100%) !important;
+    border-color: #a52325 !important;
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 5px rgba(166, 35, 37, 0.35);
+    transition: box-shadow 0.2s ease, filter 0.2s ease;
+    padding: 5px 7px;
+}
+
+.wpd-pro-teaser-cta a:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 3px 8px rgba(166, 35, 37, 0.5);
+}
+
+/* =====================================================
+   RTL overrides
+   ===================================================== */
+body.rtl .wpd-pro-badge {
+    margin-left: 0;
+    margin-right: 6px;
+}
+
+body.rtl .wpd-pro-teaser-cta {
+    text-align: left;
+}
+
+body.rtl .wpd-pro-teaser-header-right {
+    flex-direction: row-reverse;
+}
+
+body.rtl .wpd-pro-teaser-title {
+    flex-direction: row-reverse;
+}

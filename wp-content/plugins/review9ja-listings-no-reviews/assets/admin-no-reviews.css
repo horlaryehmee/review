@@ -1,0 +1,287 @@
+:root {
+  --r9-surface: #ffffff;
+  --r9-border: #dcdcde;
+  --r9-muted: #6b7280;
+  --r9-text: #111827;
+  --r9-accent: #0f766e;
+  --r9-accent-soft: #e0f2f1;
+  --r9-shadow: 0 1px 2px rgba(16, 24, 40, 0.08);
+}
+
+.review9ja-no-reviews .r9-filters {
+  background: var(--r9-surface);
+  border: 1px solid var(--r9-border);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: var(--r9-shadow);
+  margin-bottom: 16px;
+}
+
+.review9ja-no-reviews .r9-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.review9ja-no-reviews .r9-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.review9ja-no-reviews .r9-filter-group label {
+  font-weight: 600;
+  color: var(--r9-text);
+}
+
+.review9ja-no-reviews .r9-filter-group input,
+.review9ja-no-reviews .r9-filter-group select {
+  min-width: 180px;
+}
+
+.review9ja-no-reviews .r9-filter-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.review9ja-no-reviews .r9-stats {
+  display: flex;
+  gap: 12px;
+  margin: 12px 0 18px;
+}
+
+.review9ja-no-reviews .r9-stat {
+  background: linear-gradient(135deg, var(--r9-accent-soft), #ffffff 60%);
+  border: 1px solid var(--r9-border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  min-width: 220px;
+  box-shadow: var(--r9-shadow);
+}
+
+.review9ja-no-reviews .r9-stat-label {
+  display: block;
+  color: var(--r9-muted);
+  font-size: 12px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.review9ja-no-reviews .r9-stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--r9-text);
+}
+
+.review9ja-no-reviews .r9-table-wrap {
+  background: var(--r9-surface);
+  border: 1px solid var(--r9-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--r9-shadow);
+}
+
+.review9ja-no-reviews .r9-table-wrap table {
+  margin: 0;
+  border: none;
+}
+
+.review9ja-no-reviews .r9-table-wrap th {
+  background: #f8fafc;
+  font-weight: 600;
+}
+
+.review9ja-no-reviews .r9-table-wrap td,
+.review9ja-no-reviews .r9-table-wrap th {
+  padding: 12px 14px;
+}
+
+.review9ja-no-reviews .r9-sub {
+  font-size: 12px;
+  color: var(--r9-muted);
+  margin-top: 4px;
+}
+
+.review9ja-no-reviews .r9-actions .button {
+  margin-right: 6px;
+}
+
+.review9ja-no-reviews .r9-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.review9ja-no-reviews .r9-empty {
+  text-align: center;
+  padding: 28px 16px;
+  color: var(--r9-muted);
+}
+
+.review9ja-no-reviews .r9-pagination {
+  margin-top: 18px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.review9ja-no-reviews .r9-pagination .page-numbers {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.review9ja-no-reviews .r9-pagination .page-numbers li {
+  margin: 0;
+}
+
+.review9ja-no-reviews .r9-pagination .page-numbers a,
+.review9ja-no-reviews .r9-pagination .page-numbers span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid var(--r9-border);
+  color: var(--r9-text);
+  background: var(--r9-surface);
+  text-decoration: none;
+}
+
+.review9ja-no-reviews .r9-pagination .page-numbers .current {
+  background: var(--r9-accent);
+  color: #fff;
+  border-color: var(--r9-accent);
+}
+
+@media (max-width: 782px) {
+  .review9ja-no-reviews .r9-filter-actions {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .review9ja-no-reviews .r9-filter-actions .button {
+    width: 100%;
+  }
+
+  .review9ja-no-reviews .r9-stats {
+    flex-direction: column;
+  }
+
+  .review9ja-no-reviews .r9-table-wrap table,
+  .review9ja-no-reviews .r9-table-wrap thead,
+  .review9ja-no-reviews .r9-table-wrap tbody,
+  .review9ja-no-reviews .r9-table-wrap th,
+  .review9ja-no-reviews .r9-table-wrap td,
+  .review9ja-no-reviews .r9-table-wrap tr {
+    display: block;
+    width: 100%;
+  }
+
+  .review9ja-no-reviews .r9-table-wrap thead {
+    display: none;
+  }
+
+  .review9ja-no-reviews .r9-table-wrap tr {
+    border-bottom: 1px solid var(--r9-border);
+    padding: 12px 14px;
+  }
+
+  .review9ja-no-reviews .r9-table-wrap td {
+    border: none;
+    padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .review9ja-no-reviews .r9-table-wrap td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--r9-muted);
+    flex: 0 0 40%;
+  }
+
+  .review9ja-no-reviews .r9-table-wrap td.r9-cell-listing {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .review9ja-no-reviews .r9-table-wrap td.r9-cell-listing::before {
+    margin-bottom: 6px;
+  }
+
+  .review9ja-no-reviews .r9-sub {
+    display: none;
+  }
+
+  .review9ja-no-reviews .r9-table-wrap td[data-label="Status"],
+  .review9ja-no-reviews .r9-table-wrap td[data-label="Author"] {
+    display: none;
+  }
+
+  .review9ja-no-reviews .r9-actions {
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 6px;
+    row-gap: 6px;
+    column-gap: 6px;
+  }
+
+  .review9ja-no-reviews .r9-table-wrap td.r9-actions::before {
+    display: none;
+  }
+
+  .review9ja-no-reviews .r9-table-wrap td.r9-actions {
+    justify-content: flex-start;
+    gap: 6px;
+  }
+
+  .review9ja-no-reviews .r9-actions .button {
+    width: auto !important;
+    margin-right: 0;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    min-height: 30px;
+    font-size: 12px;
+    line-height: 1.2;
+    border-radius: 8px;
+    flex: 0 0 auto;
+  }
+
+  .review9ja-no-reviews .r9-actions .r9-action {
+    white-space: nowrap;
+  }
+
+  .review9ja-no-reviews .r9-actions .button-secondary {
+    flex: 0 0 auto;
+  }
+
+  .review9ja-no-reviews .r9-actions .button-secondary {
+    background: #f1f5f9;
+    border-color: #d7dde5;
+    color: #1f2937;
+  }
+
+  .review9ja-no-reviews .r9-actions .button-secondary:hover,
+  .review9ja-no-reviews .r9-actions .button-secondary:focus {
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+  }
+}

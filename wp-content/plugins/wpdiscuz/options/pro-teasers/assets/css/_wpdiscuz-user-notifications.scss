@@ -1,0 +1,156 @@
+// =====================================================
+//  WUN — User Notifications: switcher/bell/colors/phrases
+// =====================================================
+
+.wpd-pro-teaser-body {
+
+    // Switcher with text label
+    .wpd-opt-input-wtext {
+        display: inline-block;
+        margin-bottom: 5px;
+        min-width: 100%;
+    }
+
+    .wpd-switcher-wtext {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .wpd-switcher-label {
+        display: inline-block;
+
+        label {
+            vertical-align: inherit;
+        }
+    }
+
+    // Bell style SVG labels
+    .wun-bell-style {
+        width: 15px;
+        height: 18px;
+        vertical-align: middle;
+        fill: #333;
+    }
+
+    .wpd-switch-field label.wun-bell-style-lbl {
+        min-width: 75px;
+    }
+
+    // Colors section layout
+    .wpd-un-bell-colors,
+    .wpd-un-bar-bell-colors {
+        float: left;
+        width: 48%;
+    }
+
+    // Colors section — opt-input spanning full row (calc override)
+    .wun-pro-colors-h2 {
+        margin-bottom: 0;
+        font-size: 15px;
+        color: #555;
+    }
+
+    .wun-pro-colors-h4 {
+        font-size: 14px;
+        color: #0c8d71;
+    }
+
+    // Sound URL input — full width
+    .wun-pro-sound-input { width: 100%; }
+
+    // DB management disabled buttons
+    .wun-pro-db-btn {
+        display: inline-block;
+        margin: 4px 6px 4px 0;
+        padding: 4px 10px;
+        background: #f6f7f7;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 13px;
+        color: #555;
+    }
+
+    // Textarea for message fields
+    .wpd-opt-input textarea {
+        width: 100%;
+        font-family: monospace;
+        font-size: 12px;
+        resize: vertical;
+    }
+
+    // Shortcode variable tags
+    .wc_available_variable {
+        display: inline-block;
+        background: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 1px 5px;
+        font-size: 11px;
+        font-family: monospace;
+        color: #07B290;
+        margin: 2px 2px 2px 0;
+    }
+}
+
+// Notification texts accordion
+#wun-pro-phrases-accordion {
+    .wun-accordion-item {
+        margin: 7px 0;
+    }
+
+    .wun-accordion-title {
+        position: relative;
+        padding: 4px 50px 4px 4px;
+        cursor: default;
+        display: block;
+        border: 1px solid #d3d3d3;
+        background-color: #f9f9f9;
+        color: #10b493;
+
+        p {
+            margin: 5px 0 5px 15px;
+            font-weight: normal;
+            font-size: 20px;
+        }
+
+        &::after {
+            content: "\f139";
+            font-family: dashicons;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotateZ(90deg);
+            right: 10px;
+            font-size: 25px;
+        }
+    }
+
+    .wun-accordion-current .wun-accordion-title {
+        background-color: #00B38F;
+        color: #f0f0f0;
+    }
+
+    .wun-accordion-item:not(.wun-accordion-current) .wun-accordion-content {
+        display: none;
+    }
+
+    .wun-subtitle {
+        font-size: 17px;
+        font-weight: 600;
+        color: #444;
+        margin: 16px 0 4px;
+    }
+}
+
+// RTL
+body.rtl .wpd-pro-teaser-body {
+    .wpd-color-wrap label {
+        margin-left: 0;
+        margin-right: 6px;
+    }
+
+    .wpd-un-bell-colors,
+    .wpd-un-bar-bell-colors {
+        float: right;
+    }
+}

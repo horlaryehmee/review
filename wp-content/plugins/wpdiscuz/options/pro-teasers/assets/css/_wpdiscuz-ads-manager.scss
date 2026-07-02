@@ -1,0 +1,11 @@
+// =====================================================
+//  WAM — Ads Manager: disabled cache reset buttons
+// =====================================================
+
+.wpd-pro-teaser-body {
+    .wam-pro-cache-btn {
+        // Suppress the underline that <a> tags add in some themes
+        text-decoration: none;
+        // pointer-events already disabled by the parent .wpd-opt-row rule
+    }
+}

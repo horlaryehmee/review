@@ -1,0 +1,21 @@
+// =====================================================
+//  WTI — Tenor Integration: logo image in intro
+// =====================================================
+
+.wpd-pro-teaser-body {
+    .wti-pro-logo {
+        height: 60px;
+        padding-top: 5px;
+        float: left;
+        margin-right: 12px;
+    }
+}
+
+// RTL
+body.rtl .wpd-pro-teaser-body {
+    .wti-pro-logo {
+        float: right;
+        margin-right: 0;
+        margin-left: 12px;
+    }
+}

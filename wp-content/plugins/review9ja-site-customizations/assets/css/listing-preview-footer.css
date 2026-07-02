@@ -1,0 +1,223 @@
+/* Explore card footer alignment */
+.listing-preview .listing-details.c27-footer-section {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px;
+  padding: 10px 12px !important;
+  border-top: 1px solid #eef0f2;
+  background: #ffffff;
+}
+
+.listing-preview .listing-details.c27-footer-section > ul,
+.listing-preview .listing-details.c27-footer-section .c27-listing-preview-category-list {
+  position: static !important;
+  float: none !important;
+  width: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.listing-preview .listing-details.c27-footer-section .c27-listing-preview-category-list li {
+  margin: 0 !important;
+}
+
+.listing-preview .listing-details.c27-footer-section .cat-icon {
+  width: 30px !important;
+  height: 30px !important;
+  min-width: 30px !important;
+  border-radius: 10px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  background: #f3f4f6 !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.listing-preview .listing-details.c27-footer-section .cat-icon i {
+  font-size: 16px !important;
+  color: #6b7280 !important;
+}
+
+.listing-preview .listing-details.c27-footer-section .cat-icon svg,
+.listing-preview .listing-details.c27-footer-section .cat-icon img {
+  width: 16px !important;
+  height: 16px !important;
+  object-fit: contain !important;
+}
+
+.listing-preview .listing-details.c27-footer-section .category-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #242429;
+}
+
+.listing-preview .listing-details.c27-footer-section .ld-info {
+  position: static !important;
+  float: none !important;
+  width: auto !important;
+  margin-left: auto !important;
+}
+
+.listing-preview .listing-details.c27-footer-section .ld-info ul {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.listing-preview .listing-details.c27-footer-section .ld-info ul li {
+  margin: 0 !important;
+}
+
+.listing-preview .listing-details.c27-footer-section .ld-info ul li a {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  background: #f3f4f6 !important;
+  border: 1px solid #e5e7eb !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: none !important;
+}
+
+.listing-preview .listing-details.c27-footer-section .ld-info ul li a i {
+  font-size: 14px !important;
+  color: #6b7280 !important;
+}
+
+.listing-preview .listing-details.c27-footer-section .ld-info ul li a:hover {
+  background: #e5e7eb !important;
+}
+
+/* Force info fields (phone/address) to stack */
+.listing-preview .lf-contact {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 1px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.listing-preview .lf-contact li {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 0 !important;
+  line-height: 1.1 !important;
+  padding: 0 !important;
+  white-space: normal !important;
+  min-width: 0 !important;
+}
+
+.listing-preview .lf-contact li i,
+.listing-preview .lf-contact li span.material-icons,
+.listing-preview .lf-contact li span.mi,
+.listing-preview .lf-contact li .r9-address-icon {
+  margin-inline-end: 3px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Explore page: keep address line on one line with ellipsis */
+#c27-explore-listings .listing-preview .lf-contact li.r9-address-line {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  min-width: 0 !important;
+}
+
+#c27-explore-listings .listing-preview .lf-contact li.r9-address-line .r9-address-text {
+  display: inline-block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1 1 auto;
+}
+
+#c27-explore-listings .listing-preview .lf-contact li.r9-address-line br {
+  display: none;
+}
+
+
+/* Space after title and before ratings */
+.listing-preview .listing-preview-title {
+  margin-bottom: 10px !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.listing-preview .lf-contact li:last-child {
+  margin-top: 8px !important;
+}
+
+.listing-preview .listing-rating {
+  display: inline-flex !important;
+}
+
+.listing-preview .lf-contact li,
+.listing-preview .lf-contact li a,
+.listing-preview .lf-contact li span {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.listing-preview .listing-details.c27-footer-section {
+  flex-wrap: wrap;
+}
+
+.listing-preview .listing-details.c27-footer-section .category-name {
+  display: inline-block;
+  max-width: clamp(100px, 28vw, 180px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#c27-explore-listings .listing-preview .category-name.r9-cat-short {
+  max-width: none !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 768px) {
+  #c27-explore-listings .listing-preview .listing-preview-title {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  #c27-explore-listings .listing-preview .lf-contact {
+    gap: 2px;
+  }
+
+  #c27-explore-listings .listing-preview .listing-details.c27-footer-section .ld-info ul li a {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  #c27-explore-listings .listing-preview .listing-details.c27-footer-section .ld-info ul li a i {
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #c27-explore-listings .listing-preview .listing-details.c27-footer-section {
+    row-gap: 8px;
+  }
+
+  #c27-explore-listings .listing-preview .listing-details.c27-footer-section .category-name {
+    max-width: clamp(80px, 40vw, 140px);
+  }
+}

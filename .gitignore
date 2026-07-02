@@ -1,0 +1,42 @@
+# Local and sensitive WordPress files
+wp-config.php
+.htaccess
+.htaccess_old
+.user.ini
+php.ini
+error_log
+*.log
+local-xdebuginfo.php
+.hcflag
+.litespeed_flag
+
+# WordPress core
+/index.php
+/license.txt
+/readme.html
+/robots.txt
+/xmlrpc.php
+/wp-*.php
+/wp-admin/
+/wp-includes/
+
+# Generated/cache/backup content
+wp-content/cache/
+wp-content/.litespeed_conf.dat
+wp-content/litespeed/
+wp-content/temp-write-test-*
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wflogs/
+wp-content/wpvividbackups/
+wp-content/wpvivid_staging/
+wp-content/wpvivid_uploads/
+wp-content/backuply/
+wp-content/*.zip
+*.zip
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
